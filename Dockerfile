@@ -1,7 +1,7 @@
 ## Neo4J dependency: dockerfile/java
 ## get java from trusted build
 from dockerfile/java
-maintainer Tiago Pires, tiago-a-pires@ptinovacao.pt
+maintainer Cameron Lopez, cameron.lopez@rackspace.com
 
 ## install neo4j according to http://www.neo4j.org/download/linux
 # Import neo4j signing key
@@ -22,8 +22,6 @@ run apt-get clean
 ## enable neo4j indexing, and set indexable keys to name,age
 run sed -i "s|#node_auto_indexing|node_auto_indexing|g" /var/lib/neo4j/conf/neo4j.properties
 run sed -i "s|#node_keys_indexable|node_keys_indexable|g" /var/lib/neo4j/conf/neo4j.properties
-
-workdir /
 
 expose 7474
 
