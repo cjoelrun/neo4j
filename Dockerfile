@@ -22,6 +22,7 @@ run apt-get clean
 ## enable neo4j indexing, and set indexable keys to name,age
 run sed -i "s|#node_auto_indexing|node_auto_indexing|g" /var/lib/neo4j/conf/neo4j.properties
 run sed -i "s|#node_keys_indexable|node_keys_indexable|g" /var/lib/neo4j/conf/neo4j.properties
+run sed -i "s|#org.neo4j.server.webserver.address|org.neo4j.server.webserver.address|g" /var/lib/neo4j/conf/neo4j.properties
 
 expose 7474
 
